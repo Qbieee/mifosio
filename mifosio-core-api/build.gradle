@@ -1,0 +1,12 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-core-lang')
+
+    compile "org.springframework.cloud:spring-cloud-starter-config"
+    compile "org.springframework.cloud:spring-cloud-starter-feign"
+    compile "org.springframework.cloud:spring-cloud-starter-eureka"
+//    compile "com.netflix.feign:feign-gson:${feign_gson_version}"
+    compile "io.github.openfeign:feign-gson:${feign_gson_version}"
+}

@@ -1,0 +1,11 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-core-lang')
+    compile project(':mifosio-core-async')
+    compile project(':mifosio-core-cassandra')
+
+    compile "org.springframework:spring-jms"
+    compile "org.apache.activemq:activemq-spring:${activemq_spring_version}"
+}

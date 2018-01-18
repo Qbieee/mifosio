@@ -1,0 +1,25 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-accounting-api')
+    compile project(':mifosio-customer-api')
+    compile project(':mifosio-anubis-library')
+    compile project(':mifosio-core-lang')
+    compile project(':mifosio-core-async')
+    compile project(':mifosio-core-cassandra')
+    compile project(':mifosio-core-mariadb')
+    compile project(':mifosio-core-command')
+
+    compile "org.springframework.boot:spring-boot-actuator"
+    compile "org.springframework.boot:spring-boot-autoconfigure"
+    compile "org.springframework.boot:spring-boot-loader-tools"
+    compile "org.springframework.boot:spring-boot-starter-mail"
+    compile "org.springframework.boot:spring-boot-starter-logging"
+    compile "org.springframework.boot:spring-boot-starter-aop"
+    compile "org.springframework.boot:spring-boot-starter-data-jpa"
+    compile "org.springframework.boot:spring-boot-starter-security"
+    compile ("org.springframework.boot:spring-boot-starter-web") {
+        exclude module: 'spring-boot-starter-tomcat'
+    }
+}

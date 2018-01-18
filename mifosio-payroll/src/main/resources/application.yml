@@ -1,0 +1,88 @@
+#
+# Copyright 2017 The Mifos Initiative.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+spring:
+  cloud:
+    discovery:
+      enabled: true
+    config:
+      enabled: false
+
+eureka:
+    instance:
+        appname: payroll-v1
+        instanceId: payroll-v1:${spring.application.instance-id:${random.value}}
+        lease-renewal-interval-in-seconds: 5
+        lease-expiration-duration-in-seconds: 10
+        prefer-ip-address: true
+    client:
+        enabled: true
+        healthcheck:
+            enabled: true
+        fetch-registry: true
+        register-with-eureka: true
+        instance-info-replication-interval-seconds: 10
+        registry-fetch-interval-seconds: 10
+        service-url:
+            defaultZone: http://admin:admin@localhost:8761/eureka/
+
+ribbon:
+    eureka:
+        enabled: true
+
+server:
+  port: 2031
+  contextPath: /payroll/v1
+
+cassandra:
+  clusterName: staging_cluster
+  contactPoints: 127.0.0.1:9042,127.0.0.2:9042,127.0.0.3:9042
+  keyspace: seshat
+  cl:
+    read: LOCAL_QUORUM
+    write: LOCAL_QUORUM
+    delete: LOCAL_QUORUM
+
+mariadb:
+  driverClass: org.mariadb.jdbc.Driver
+  database: seshat
+  host: localhost
+  port: 3306
+  user: root
+  password: mysql
+
+bonecp:
+  idleMaxAgeInMinutes: 240
+  idleConnectionTestPeriodInMinutes: 60
+  maxConnectionsPerPartition: 10
+  minConnectionsPerPartition: 1
+  partitionCount: 2
+  acquireIncrement: 5
+  statementsCacheSize: 100
+
+async:
+  corePoolSize: 32
+  maxPoolSize: 16384
+  queueCapacity: 0
+  threadName: async-processor-
+
+flyway:
+  enabled: false
+
+system.publicKey:
+  modulus: 20107854354885919510042427296844832591161369691978387745288125682621589866987357974750669107369566926907113916243221695459650332339607444908739198415363392431677245606781997191493958622570467642001107649069763010681454304774374757421151144207230652014856169124429172456628241401520723832227173107650142784773547330742483730700711986799677174178922164964693056051386879710446122686265308936320639803706798890650957996201722754217137582749490521969893942821674796772860640762427741023092747770067097163202108304071665501745054650208117818621925132708928009596870555358264185176724399136038147156416179326367538797534413
+  exponent: 65537
+  timestamp: 2018-01-18T09_35_43

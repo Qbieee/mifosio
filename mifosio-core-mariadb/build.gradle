@@ -1,0 +1,17 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-core-lang')
+
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile "org.hibernate:hibernate-core"
+    compile "org.hibernate:hibernate-entitymanager"
+    compile "org.hibernate:hibernate-validator"
+    compile('org.flywaydb:flyway-core')
+    compile "com.jolbox:bonecp:${jolbox_bonecp_version}"
+
+    compile "org.mariadb.jdbc:mariadb-java-client:${mariadb_driver_version}"
+
+
+}

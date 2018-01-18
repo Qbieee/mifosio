@@ -1,0 +1,12 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-identity-api')
+    compile project(':mifosio-anubis-library')
+    compile project(':mifosio-core-lang')
+    compile project(':mifosio-core-async')
+    compile project(':mifosio-core-cassandra')
+    compile project(':mifosio-core-command')
+    compile project(':mifosio-tools-crypto')
+}

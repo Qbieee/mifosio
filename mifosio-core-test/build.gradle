@@ -1,0 +1,15 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-core-lang')
+    compile project(':mifosio-core-cassandra')
+    compile project(':mifosio-core-mariadb')
+
+    compile "io.jsonwebtoken:jjwt:${jsonwebtoken_jjwt_version}"
+    compile "com.google.code.gson:gson:${google_gson_version}"
+    compile "org.springframework.boot:spring-boot-starter"
+    compile "org.springframework.boot:spring-boot-starter-test"
+    compile "org.cassandraunit:cassandra-unit:${cassandra_unit_version}"
+    compile "ch.vorburger.mariaDB4j:mariaDB4j:${vorburger_mariaDB4j_version}"
+}

@@ -1,0 +1,10 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-permitted-feign-client-api')
+    compile project(':mifosio-core-cassandra')
+    compile project(':mifosio-anubis-library')
+
+    compile "net.jodah:expiringmap:${jodah_expiringmap_version}"
+}

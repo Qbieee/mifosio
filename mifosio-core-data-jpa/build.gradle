@@ -1,0 +1,10 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-core-lang')
+
+    compile "org.springframework.boot:spring-boot-starter-data-jpa"
+    compile "org.liquibase:liquibase-core"
+    compile "org.apache.commons:commons-dbcp2:${commons_dbcp2_version}"
+}

@@ -1,0 +1,18 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-teller-api')
+    compile project(':mifosio-office-api')
+    compile project(':mifosio-accounting-api')
+    compile project(':mifosio-deposit-account-management-api')
+    compile project(':mifosio-cheques-api')
+    compile project(':mifosio-portfolio-api')
+    compile project(':mifosio-anubis-library')
+    compile project(':mifosio-core-lang')
+    compile project(':mifosio-core-async')
+    compile project(':mifosio-core-cassandra')
+    compile project(':mifosio-core-mariadb')
+    compile project(':mifosio-core-command')
+    compile project(':mifosio-tools-crypto')
+}

@@ -1,0 +1,8 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-accounting-api')
+
+    compile "org.apache.commons:commons-csv:${commons_csv_version}"
+}

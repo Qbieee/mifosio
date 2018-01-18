@@ -1,0 +1,6 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile "org.springframework.security:spring-security-core"
+}

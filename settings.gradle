@@ -1,0 +1,81 @@
+rootProject.name = 'mifosio'
+
+//core
+include 'mifosio-core-lang'
+include 'mifosio-core-api'
+include 'mifosio-core-async'
+include 'mifosio-core-cassandra'
+include 'mifosio-core-command'
+include 'mifosio-core-data-jpa'
+include 'mifosio-core-mariadb'
+include 'mifosio-core-test'
+
+//tools
+include 'mifosio-tools-crypto'
+
+//anubis
+include 'mifosio-anubis-api'
+include 'mifosio-anubis-library'
+
+//identity
+include 'mifosio-identity-api'
+include 'mifosio-identity'
+
+//permitted-feign-client
+include 'mifosio-permitted-feign-client-api'
+include 'mifosio-permitted-feign-client-library'
+
+//rhythm
+include 'mifosio-rhythm-api'
+include 'mifosio-rhythm-spi'
+include 'mifosio-rhythm'
+
+//provisioner
+include 'mifosio-provisioner-api'
+include 'mifosio-provisioner'
+
+//office
+include 'mifosio-office-api'
+include 'mifosio-office'
+
+//group
+include 'mifosio-group-api'
+include 'mifosio-group'
+
+//customer
+include 'mifosio-customer-api'
+include 'mifosio-customer'
+
+//accounting
+include 'mifosio-accounting-api'
+include 'mifosio-accounting-importer'
+include 'mifosio-accounting'
+
+//portfolio
+include 'mifosio-portfolio-api'
+include 'mifosio-portfolio'
+
+//deposit-account-management
+include 'mifosio-deposit-account-management-api'
+include 'mifosio-deposit-account-management'
+
+//cheques
+include 'mifosio-cheques-api'
+include 'mifosio-cheques'
+
+//payroll
+include 'mifosio-payroll-api'
+include 'mifosio-payroll'
+
+//teller
+include 'mifosio-teller-api'
+include 'mifosio-teller'
+
+//template
+include 'mifosio-template-api'
+include 'mifosio-template'
+
+//reporting
+include 'mifosio-reporting-api'
+include 'mifosio-reporting'
+

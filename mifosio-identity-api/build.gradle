@@ -1,0 +1,7 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-core-api')
+    compile project(':mifosio-anubis-api')
+}

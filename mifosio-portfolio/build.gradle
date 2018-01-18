@@ -1,0 +1,21 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-portfolio-api')
+    compile project(':mifosio-customer-api')
+    compile project(':mifosio-accounting-api')
+    compile project(':mifosio-rhythm-api')
+    compile project(':mifosio-rhythm-spi')
+    compile project(':mifosio-anubis-library')
+    compile project(':mifosio-core-lang')
+    compile project(':mifosio-core-async')
+    compile project(':mifosio-core-cassandra')
+    compile project(':mifosio-core-mariadb')
+    compile project(':mifosio-core-command')
+
+    compile "javax.money:money-api:${javamoney_api_version}"
+    compile "org.javamoney:moneta:${javamoney_moneta_version}"
+    compile "org.javamoney.lib:javamoney-calc:${javamoneylib_version}"
+    compile "net.jodah:expiringmap:${jodah_expiringmap_version}"
+}

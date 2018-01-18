@@ -1,0 +1,44 @@
+buildscript {
+    ext {
+//        springBootVersion = '1.5.9.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${spring_boot_version}")
+    }
+}
+
+allprojects {
+    group 'io.mifos'
+    version '1.0-SNAPSHOT'
+
+    repositories {
+//        jcenter()
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'maven-publish'
+    apply plugin: 'org.springframework.boot'
+
+    sourceCompatibility = 1.8
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${spring_cloud_version}"
+        }
+    }
+
+    dependencies {
+        compile "com.google.code.findbugs:jsr305:${findbugs_jsr305_version}"
+
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
+

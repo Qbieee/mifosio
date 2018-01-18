@@ -1,0 +1,10 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-core-lang')
+
+    compile "com.datastax.cassandra:cassandra-driver-core:${cassandra_driver_version}"
+    compile "com.datastax.cassandra:cassandra-driver-mapping:${cassandra_driver_version}"
+    compile "com.datastax.cassandra:cassandra-driver-extras:${cassandra_driver_version}"
+}

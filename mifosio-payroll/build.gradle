@@ -1,0 +1,14 @@
+//group 'io.mifos'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile project(':mifosio-payroll-api')
+    compile project(':mifosio-customer-api')
+    compile project(':mifosio-accounting-api')
+    compile project(':mifosio-anubis-library')
+    compile project(':mifosio-core-lang')
+    compile project(':mifosio-core-async')
+    compile project(':mifosio-core-cassandra')
+    compile project(':mifosio-core-mariadb')
+    compile project(':mifosio-core-command')
+}
