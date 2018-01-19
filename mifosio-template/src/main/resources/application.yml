@@ -31,13 +31,13 @@ server:
   contextPath: /template/v1/*
 
 cassandra:
-  clusterName: staging_cluster
-  contactPoints: 127.0.0.1:9042,127.0.0.2:9042,127.0.0.3:9042
+  clusterName: "Test Cluster"
+  contactPoints: 127.0.0.1:9042 #,127.0.0.2:9042,127.0.0.3:9042
   keyspace: seshat
   cl:
-    read: LOCAL_QUORUM
-    write: LOCAL_QUORUM
-    delete: LOCAL_QUORUM
+    read: ONE #LOCAL_QUORUM
+    write: ONE #LOCAL_QUORUM
+    delete: ONE #LOCAL_QUORUM
 
 mariadb:
   driverClass: org.mariadb.jdbc.Driver

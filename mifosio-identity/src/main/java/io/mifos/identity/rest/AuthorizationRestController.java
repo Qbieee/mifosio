@@ -37,6 +37,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.codec.Base64;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.WebUtils;
 
@@ -145,7 +146,8 @@ public class AuthorizationRestController {
     if (refreshTokenCookie == null)
       throw ServiceException.badRequest("One (and only one) refresh token cookie must be included in the request if the grant_type is refresh_token");
 
-    return refreshTokenCookie.getValue();
+      return new String(Base64.decode(refreshTokenCookie.getValue().getBytes()));
+//    return refreshTokenCookie.getValue();
   }
 
   private AuthenticationCommandResponse getAuthenticationCommandResponse(
@@ -205,7 +207,12 @@ public class AuthorizationRestController {
   }
 
   private Cookie bakeRefreshTokenCookie(final String refreshToken) {
-    final Cookie refreshTokenCookie = new Cookie(TokenConstants.REFRESH_TOKEN_COOKIE_NAME, refreshToken);
+      StringBuilder sb = new StringBuilder(new String(Base64.encode(refreshToken.getBytes())));
+
+      while (sb.charAt(sb.length() - 1) == '=') {
+          sb.deleteCharAt(sb.length() - 1);
+      }
+      final Cookie refreshTokenCookie = new Cookie(TokenConstants.REFRESH_TOKEN_COOKIE_NAME, sb.toString());
     refreshTokenCookie.setSecure(secureRefreshTokenCookie);
     refreshTokenCookie.setHttpOnly(true);
     refreshTokenCookie.setPath(contextPath + "/token");
