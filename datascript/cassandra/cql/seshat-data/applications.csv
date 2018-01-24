@@ -1,0 +1,11 @@
+rhythm-v1,,http://localhost:2022/rhythm/v1,Apache Fineract
+identity-v1,,http://localhost:2021/identity/v1,Apache Fineract
+payroll-v1,,http://localhost:2031/payroll/v1,Apache Fineract
+cheques-v1,,http://localhost:2030/cheques/v1,Apache Fineract
+portfolio-v1,,http://localhost:2026/portfolio/v1,Apache Fineract
+office-v1,,http://localhost:2023/office/v1,Apache Fineract
+accounting-v1,,http://localhost:2025/accounting/v1,Apache Fineract
+deposit-v1,,http://localhost:2027/deposit/v1,Apache Fineract
+teller-v1,,http://localhost:2028/teller/v1,Apache Fineract
+reporting-v1,,http://localhost:2029/reporting/v1,Apache Fineract
+customer-v1,,http://localhost:2024/customer/v1,Apache Fineract

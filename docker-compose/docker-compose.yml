@@ -1,0 +1,157 @@
+version: '2'
+services:
+    mifosio-identity-app:
+        image: mifosio-identity
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${registry.password}@registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${registry.password}@registry:8761/config
+            - connpool_host=10.0.75.1
+            - cassandra_contactPoints=10.0.75.1:9042
+            - SLEEP=30
+            - REGISTRY_PASSWORD=admin
+        ports:
+            - 2021:2021
+
+    mifosio-rhythm-app:
+        image: mifosio-rhythm
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${registry.password}@registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${registry.password}@registry:8761/config
+            - mariadb_host=10.0.75.1
+            - cassandra_contactPoints=10.0.75.1:9042
+            - SLEEP=30
+            - REGISTRY_PASSWORD=admin
+        ports:
+            - 2022:2022
+
+    mifosio-office-app:
+        image: mifosio-office
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${registry.password}@registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${registry.password}@registry:8761/config
+            - MARIADB_HOST=10.0.75.1
+            - cassandra_contactPoints=10.0.75.1:9042
+            - SLEEP=30
+            - REGISTRY_PASSWORD=admin
+        ports:
+            - 2023:2023
+
+    mifosio-customer-app:
+        image: mifosio-customer
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${registry.password}@registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${registry.password}@registry:8761/config
+            - mariadb_host=10.0.75.1
+            - cassandra_contactPoints=10.0.75.1:9042
+            - SLEEP=30
+            - REGISTRY_PASSWORD=admin
+        ports:
+            - 2024:2024
+
+    mifosio-accounting-app:
+        image: mifosio-accounting
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${registry.password}@registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${registry.password}@registry:8761/config
+            - mariadb_host=10.0.75.1
+            - cassandra_contactPoints=10.0.75.1:9042
+            - SLEEP=30
+            - REGISTRY_PASSWORD=admin
+        ports:
+            - 2025:2025
+
+    mifosio-portfolio-app:
+        image: mifosio-portfolio
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${registry.password}@registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${registry.password}@registry:8761/config
+            - mariadb_host=10.0.75.1
+            - cassandra_contactPoints=10.0.75.1:9042
+            - SLEEP=30
+            - REGISTRY_PASSWORD=admin
+        ports:
+            - 2026:2026
+
+    mifosio-deposit-account-management-app:
+        image: mifosio-deposit-account-management
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${registry.password}@registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${registry.password}@registry:8761/config
+            - mariadb_host=10.0.75.1
+            - cassandra_contactPoints=10.0.75.1:9042
+            - SLEEP=30
+            - REGISTRY_PASSWORD=admin
+        ports:
+            - 2027:2027
+
+    mifosio-teller-app:
+        image: mifosio-teller
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${registry.password}@registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${registry.password}@registry:8761/config
+            - mariadb_host=10.0.75.1
+            - cassandra_contactPoints=10.0.75.1:9042
+            - SLEEP=30
+            - REGISTRY_PASSWORD=admin
+        ports:
+            - 2028:2028
+
+    mifosio-reporting-app:
+        image: mifosio-reporting
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${registry.password}@registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${registry.password}@registry:8761/config
+            - mariadb_host=10.0.75.1
+            - cassandra_contactPoints=10.0.75.1:9042
+            - SLEEP=30
+            - REGISTRY_PASSWORD=admin
+        ports:
+            - 2029:2029
+
+    mifosio-cheques-app:
+        image: mifosio-cheques
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${registry.password}@registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${registry.password}@registry:8761/config
+            - mariadb_host=10.0.75.1
+            - cassandra_contactPoints=10.0.75.1:9042
+            - SLEEP=30
+            - REGISTRY_PASSWORD=admin
+        ports:
+            - 2030:2030
+
+    mifosio-payroll-app:
+        image: mifosio-payroll
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${registry.password}@registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${registry.password}@registry:8761/config
+            - mariadb_host=10.0.75.1
+            - cassandra_contactPoints=10.0.75.1:9042
+            - SLEEP=30
+            - REGISTRY_PASSWORD=admin
+        ports:
+            - 2031:2031
+
+#    registry:
+#        extends:
+#            file: registry.yml
+#            service: registry
+#    cassandra:
+#        extends:
+#            file: cassandra.yml
+#            service: cassandra
+#    activemq:
+#        extends:
+#            file: activemq.yml
+#            service: activemq

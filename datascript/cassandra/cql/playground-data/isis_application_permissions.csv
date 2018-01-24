@@ -1,0 +1,3 @@
+rhythm-v1,deposit__v1__khepri,"{permittable_group_identifier: 'deposit__v1__khepri', allowed_operations: {'CHANGE'}}"
+rhythm-v1,identity__v1__app_self,"{permittable_group_identifier: 'identity__v1__app_self', allowed_operations: {'CHANGE'}}"
+rhythm-v1,portfolio__v1__khepri,"{permittable_group_identifier: 'portfolio__v1__khepri', allowed_operations: {'CHANGE'}}"

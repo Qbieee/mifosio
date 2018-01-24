@@ -1,0 +1,9 @@
+version: '2'
+services:
+    activemq:
+        image: webcenter/activemq:latest
+        ports:
+            - 8161:8161
+            - 61613:61613
+            - 61614:61614
+            - 61616:61616

@@ -1,0 +1,9 @@
+#common configuration shared between all applications
+configserver:
+    name: Docker Mifosio Registry
+    status: Connected to the Mifosio Registry running in Docker
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://admin:${registry.password}@registry:8761/eureka/
