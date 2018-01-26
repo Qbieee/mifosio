@@ -46,7 +46,7 @@ ribbon:
 server:
   port: 9090
   contextPath: /provisioner/v1
-
+  max-http-header-size: 16384
 flyway:
   enabled: false
 

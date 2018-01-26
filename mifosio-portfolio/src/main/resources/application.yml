@@ -63,7 +63,7 @@ ribbon:
 server:
   port: 2026
   contextPath: /portfolio/v1
-
+  max-http-header-size: 16384
 portfolio:
   bookLateFeesAndInterestAsUser: imhotep
 

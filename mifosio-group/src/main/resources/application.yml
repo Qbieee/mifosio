@@ -30,7 +30,7 @@ eureka:
 server:
   port: 8081
   contextPath: /group/v1/*
-
+  max-http-header-size: 16384
 cassandra:
   clusterName: "Test Cluster"
   contactPoints: 127.0.0.1:9042 #,127.0.0.2:9042,127.0.0.3:9042
