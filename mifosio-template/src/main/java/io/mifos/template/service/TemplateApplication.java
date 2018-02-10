@@ -15,6 +15,7 @@
  */
 package io.mifos.template.service;
 
+import io.mifos.core.lang.TenantContextHolder;
 import org.springframework.boot.SpringApplication;
 
 public class TemplateApplication {
@@ -24,6 +25,7 @@ public class TemplateApplication {
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(TemplateConfiguration.class, args);
+      TenantContextHolder.setIdentifier("playground");
+      SpringApplication.run(TemplateConfiguration.class, args);
   }
 }

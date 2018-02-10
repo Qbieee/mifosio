@@ -15,6 +15,7 @@
  */
 package io.mifos.group.service;
 
+import io.mifos.core.lang.TenantContextHolder;
 import org.springframework.boot.SpringApplication;
 
 public class GroupApplication {
@@ -24,6 +25,7 @@ public class GroupApplication {
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(GroupConfiguration.class, args);
+      TenantContextHolder.setIdentifier("playground");
+      SpringApplication.run(GroupConfiguration.class, args);
   }
 }

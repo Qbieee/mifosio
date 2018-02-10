@@ -21,6 +21,7 @@ import io.mifos.anubis.config.EnableAnubis;
 import io.mifos.core.async.config.EnableAsync;
 import io.mifos.core.cassandra.config.EnableCassandra;
 import io.mifos.core.command.config.EnableCommandProcessing;
+import io.mifos.core.lang.TenantContextHolder;
 import io.mifos.core.lang.config.EnableServiceException;
 import io.mifos.core.lang.config.EnableTenantContext;
 import io.mifos.identity.internal.util.IdentityConstants;
@@ -75,6 +76,7 @@ public class IdentityServiceConfig extends WebMvcConfigurerAdapter {
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(IdentityServiceConfig.class, args);
+      TenantContextHolder.setIdentifier("playground");
+      SpringApplication.run(IdentityServiceConfig.class, args);
   }
 }

@@ -15,6 +15,7 @@
  */
 package io.mifos.rhythm.service;
 
+import io.mifos.core.lang.TenantContextHolder;
 import io.mifos.rhythm.service.config.RhythmConfiguration;
 import org.springframework.boot.SpringApplication;
 
@@ -28,6 +29,7 @@ public class RhythmApplication {
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(RhythmConfiguration.class, args);
+      TenantContextHolder.setIdentifier("playground");
+      SpringApplication.run(RhythmConfiguration.class, args);
   }
 }
